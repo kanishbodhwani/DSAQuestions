@@ -18,5 +18,4 @@ class Solution {
         } 
         return start; // or return end as both are equal
     }
-    
 }
