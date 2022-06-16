@@ -14,9 +14,9 @@ class Solution {
             }
         }
         // search for first missing number 
-        for(int in = 0; in < arr.length; i++) {
-            if(arr[in] != in) {
-                return in;
+        for(int index = 0; index < arr.length; index++) {
+            if(arr[index] != index) {
+                return index;
             } 
         }
         return arr.length;
