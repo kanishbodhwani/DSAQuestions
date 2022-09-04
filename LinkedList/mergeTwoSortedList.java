@@ -97,4 +97,87 @@ public class LL {
         return node;
     }
 
+// Question 
+// Remove duplicates
+
+    public static LL merge(LL first, LL second) {
+        Node f = fisrt.head;
+        Node s = second.head;
+        
+        LL ans = new LL();
+        
+        while(f != null && s != null) {
+            if(f.value < s.value) {
+                ans.insertLast(f.value);
+                f = f.next;
+            } else {
+                ans.insertLast(s.value);
+                s = s.next;
+            }
+        }
+        
+        while(f != null) {
+            ans.insertLast(f.value);
+            f = f.next;
+        }
+        
+        while(s != null) {
+            ans.insertLast(s.value);
+            s = s.next;
+        }
+        return ans;
+        
+    }
+    
 }
+
+
+
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeTwoLists(ListNode f, ListNode s) {
+        ListNode dummyHead = new ListNode();
+        ListNode tail = dummyHead;
+        
+        while(f != null && s != null) {
+            if(f.val < s.val) {
+                tail.next = f;
+                f = f.next;
+                tail = tail.next;
+            } else {
+                tail.next = s;
+                s = s.next;
+                tail = tail.next;
+            }
+        }
+        
+        tail.next = (f != null) ? f : s;
+        return dummyHead.next;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
