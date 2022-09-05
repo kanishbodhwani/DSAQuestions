@@ -35,9 +35,9 @@ public class LL {
     
     // reverse a linked list using iteration
     public void reverse() {
-        if(size < 2) {
-            return;
-        }
+//        if(size < 2) {
+//            return;
+//        }
         
         Node prev = null;
         Node pres = head;
