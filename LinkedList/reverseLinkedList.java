@@ -43,9 +43,8 @@ public class LL {
         Node pres = head;
         Node next = pres.next;
         
-        
         while(pres != null) {
-            pres.next = prev;
+            pres.next = prev;   
             prev = pres;
             pres = next;
             if(next != null) {
