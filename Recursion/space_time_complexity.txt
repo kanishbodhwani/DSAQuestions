@@ -1,0 +1,8 @@
+# Time Complexity 
+# how the time is going to grow as the input grows 
+
+
+# Space Complexity
+# Input space + Auxilaxy space (extra space)
+# Only talk about auxilary space 
+
