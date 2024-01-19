@@ -24,11 +24,11 @@ public class SelectionSort {
     static int getMaxIndex(int[] arr, int start, int end){
         int max = start;
         for(int i = start; i <= end; i++) {
-            if(arr[max] > arr[i]) {
+            if(arr[i] > arr[max]) {
                 max = i;
             }
         }
-        return ans;
+        return max;
     }
 
     static void swap(int[] arr, int a, int b) {

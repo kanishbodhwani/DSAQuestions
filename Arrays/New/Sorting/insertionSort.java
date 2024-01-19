@@ -19,7 +19,7 @@ public class InsertionSort {
 
     static void insertionSort(int[] arr) {
         for(int i = 0; i < arr.length - 1; i++) { // < not <= if this then it will be <= i - 2 for not out of bounds
-            for(int j = i + 1; j > 0; j++) {
+            for(int j = i + 1; j > 0; j--) {
                 if(arr[j] < arr[j - 1]) {
                     swap(arr, j, j - 1);
                 } else {

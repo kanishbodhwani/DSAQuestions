@@ -29,7 +29,7 @@ public class RotatedSortedArray {
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
     }
 
-    static int findPivot(int[] nums) {
+    static int findPivot(int[] nums) { // pivot is the largest element
        int start = 0;
        int end = arr.length - 1;
 
@@ -38,7 +38,7 @@ public class RotatedSortedArray {
 
             if(mid < end && arr[mid] > arr[mid + 1]) { // for not going out of bounds use mid < end 
                 return mid;
-            } else if(mid > start && arr[mid] < arr[mid + 1]) {
+            } else if(mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
             } else if(arr[mid] <= arr[start]) {
                 end = mid - 1;
@@ -88,7 +88,7 @@ public class RotatedSortedArray {
                 return mid;
             }
 
-            if(mid > start && arr[mid] < arr[mid + 1]) {
+            if(mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
             }
 

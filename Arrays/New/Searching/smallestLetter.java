@@ -14,7 +14,7 @@ public class SmallestLetter {
         char target = "a";
     }
 
-    static void smallestLetter(char[] arr, char target) {
+    static char smallestLetter(char[] arr, char target) {
         if(arr.length == 0) {
             return -1;
         }

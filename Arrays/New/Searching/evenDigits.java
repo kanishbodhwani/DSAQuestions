@@ -2,14 +2,14 @@ public class EvenDigits {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int[] arr = {11,24324,323,432432,5432,623,723,82323};
-        evenDigits(arr);    
+        evenDigits(arr);
     }
 
     static int numberOfDigits(int num) {
         int count = 0;
         while(num > 0) {
             count++;
-            n / 10;
+            num / 10;
         }
         return count;
     }
@@ -18,7 +18,7 @@ public class EvenDigits {
         return numberOfDigits(num) % 2 == 0;
     }
 
-    static void evenDigits(int[] arr) {
+    static int evenDigits(int[] arr) {
         if(arr.length == 0) {
             return -1;
         }

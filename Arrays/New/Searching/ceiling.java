@@ -8,7 +8,7 @@ public class BinarySearch {
         int target = 23;
     }
 
-    static void ceiling(int [] arr, int target) {
+    static int ceiling(int [] arr, int target) {
         if(arr.length == 0) {
             return -1;
         }
